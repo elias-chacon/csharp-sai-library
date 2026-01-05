@@ -1,0 +1,50 @@
+name: Publish Sai_Library to GitHub Packages
+
+on:
+  # Dispara o workflow quando uma tag de versão é criada (ex: v1.0.0)
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      # Concede permissão para o GITHUB_TOKEN publicar pacotes
+      contents: write
+      packages: write
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Extrair Versão da Tag
+        # Extrai a versão do nome da tag (ex: 'v1.2.3' -> '1.2.3')
+        run: echo "PACKAGE_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Empacotar a Biblioteca
+        # Cria o pacote .nupkg na configuração Release
+        run: |
+          dotnet pack "Sai Library/Sai Library.csproj" \
+            --configuration Release \
+            -p:PackageVersion=${{ env.PACKAGE_VERSION }} \
+            --output ./packages
+
+      - name: Configurar Fonte do NuGet
+        # Adiciona o GitHub Packages como uma fonte para o dotnet CLI
+        run: |
+          dotnet nuget add source \
+            --username ${{ github.actor }} \
+            --password ${{ secrets.GITHUB_TOKEN }} \
+            --store-password-in-clear-text \
+            --name "github" \
+            "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+
+      - name: Publicar Pacote no GitHub Packages
+        # Publica todos os pacotes .nupkg gerados na pasta 'packages'
+        run: dotnet nuget push ./packages/*.nupkg --source "github"
