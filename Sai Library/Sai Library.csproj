@@ -5,6 +5,30 @@
         <RootNamespace>Sai_Library</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <Version>1.0.0</Version>
+        <Authors>Elias Alves Chacon</Authors>
+        <Company>.</Company>
+        <Description>Uma biblioteca C# robusta para interagir com serviços de IA.</Description>
+        <PackageTags>ai;chat;api-client;csharp</PackageTags>
+        <RepositoryUrl>https://github.com/elias-chacon/csharp-sai-library.git</RepositoryUrl>
+        <Deterministic>false</Deterministic>
+        <Title>Sai Library</Title>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/elias-chacon/csharp-sai-library/blob/main/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
+        <PublicSign>false</PublicSign>
+        <PackageProjectUrl>https://raw.githubusercontent.com/elias-chacon/csharp-sai-library/refs/heads/main/README.md</PackageProjectUrl>
     </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+        <PackageReference Include="System.Text.Json" Version="8.0.6" />
+    </ItemGroup>
 
 </Project>

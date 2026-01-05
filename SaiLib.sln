@@ -12,5 +12,6 @@ Global
 		{EDDAD880-CF93-436F-9EA6-A956A95255FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDDAD880-CF93-436F-9EA6-A956A95255FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDDAD880-CF93-436F-9EA6-A956A95255FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDAD880-CF93-436F-9EA6-A956A95255FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
