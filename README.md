@@ -3,7 +3,7 @@
 [![NuGet](https://img.shields.io/nuget/v/Sai_Library.svg)](https://nuget.org/packages/Sai_Library)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet)](https://dotnet.microsoft.com)
-[![GitHub Actions](https://github.com/<elias-chacon>/<csharp-sai-library>/workflows/Publish/badge.svg)](https://github.com/<elias-chacon>/<csharp-sai-library>/actions)
+[![GitHub Actions](https://github.com/elias-chacon/csharp-sai-library/workflows/Publish/badge.svg)](https://github.com/elias-chacon/csharp-sai-library/actions)
 
 Uma biblioteca C# robusta e type-safe para interagir com serviços de IA, baseada na biblioteca Java original. Projetada com princípios SOLID, Clean Code e padrões de projeto modernos.
 
@@ -502,8 +502,7 @@ Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](L
 - **Repositório**: [https://github.com/elias-chacon/csharp-sai-library](https://github.com/elias-chacon/csharp-sai-library)
 - **Issues**: [https://github.com/elias-chacon/csharp-sai-library/issues](https://github.com/elias-chacon/csharp-sai-library/issues)
 - **NuGet**: [https://www.nuget.org/packages/Sai_Library](https://www.nuget.org/packages/Sai_Library)
-- **Documentação da API**: [https://api.ai-service.com/docs](https://api.ai-service.com/docs)
 
 ---
 
-Desenvolvido com ❤️ por [Seu Nome]. Baseado na biblioteca Java original de [Elias Alves Chacon](https://github.com/elias-chacon/csharp-sai-library).
+Desenvolvido com ❤️ por [Elias Alve Chacon]. Baseado na biblioteca Java original de [Elias Alves Chacon](https://github.com/elias-chacon/java-sai-library).
